@@ -1,11 +1,18 @@
 {
   "name": "blackjack-overlay",
   "version": "1.0.0",
+  "description": "Un overlay para OBS controlado desde otra página",
   "main": "server.js",
-  "dependencies": {
-    "ws": "^8.17.0"
-  },
   "scripts": {
     "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
+
+

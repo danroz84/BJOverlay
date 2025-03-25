@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Control</title>
+    <title>Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Panel de Control</h1>
-    <input type="text" id="inputMensaje" placeholder="Escribe un mensaje">
-    <button onclick="enviarMensaje()">Enviar</button>
-    <script src="script.js"></script>
+    <h1>Control de Overlay</h1>
+    <button id="mostrar-imagen">Mostrar Imagen</button>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:3000");
+
+        document.getElementById("mostrar-imagen").addEventListener("click", () => {
+            socket.send("mostrar-imagen");
+        });
+    </script>
 </body>
 </html>
